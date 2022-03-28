@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 
     /* global vars */ 
     int dim = atoi(argv[1]);  /*grid dimensions*/  
-    int generations = 128; /* number of gol iterations */ 
+    int generations = 1; /* number of gol iterations */ 
   
     /* begin program execution timer */ 
     auto start = std::chrono::high_resolution_clock::now();
@@ -56,10 +56,10 @@ int main(int argc, char* argv[])
         }
     }
 	
-	/* show initial grid for debug  
+	// show initial grid for debug  
 	std::cout << "\nInitial grid \n" << std::endl; 
 	printGridFullFormat(grid, dim); 
-	*/
+	
 
 	/* BEGIN GAME LOOP:
 	   for no wrapping, I am not copying real cols/rows to ghost col/rows 
@@ -87,10 +87,10 @@ int main(int argc, char* argv[])
             }
         } /* END of current generation */ 
 		
-		/*for debug 
+		/*for debug */ 
 		  std::cout << "\n The next generation grid:\n" << std::endl; 
 	      printGridFullFormat(newGrid, dim); 
-	    */
+	    
 
 		/* swap grids and begin next gen calculation */ 
         int **tmpGrid = grid;
