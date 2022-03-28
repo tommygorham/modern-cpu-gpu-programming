@@ -7,7 +7,7 @@ find_package(Kokkos REQUIRED)
 
 set(CMAKE_CXX_FLAGS "-Wall ")
 
-add_executable(gol gol.cpp )
-target_link_libraries(gol Kokkos::kokkos)
+add_executable(runKokkosGol kokkosGOL.cpp )
+target_link_libraries(runKokkosGol Kokkos::kokkos)
 
 #target_link_libraries(new.cu ${CUDA_LIBRARIES} Kokkos::kokkos)
